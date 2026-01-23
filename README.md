@@ -1,13 +1,13 @@
-# <img src="src/main/resources/META-INF/pluginIcon.svg" alt="" width="24" height="24"> Pretty JSON Log plugin
+# <img src="src/main/resources/META-INF/pluginIcon.svg" alt="" width="24" height="24"> Console Log Prettify plugin
 
-![Build](https://github.com/orangain/pretty-json-log-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/io.github.orangain.prettyjsonlog.svg)](https://plugins.jetbrains.com/plugin/24693-pretty-json-log/versions)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/io.github.orangain.prettyjsonlog.svg)](https://plugins.jetbrains.com/plugin/24693-pretty-json-log)
+![Build](https://github.com/softreigns/console-log-prettify-intellij-plugin/workflows/Build/badge.svg)
+[![Version](https://img.shields.io/jetbrains/plugin/v/io.github.softreigns.consolelogprettify.svg)](https://plugins.jetbrains.com/plugin/29850-console-log-prettify/versions)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/io.github.softreigns.consolelogprettify.svg)](https://img.shields.io/jetbrains/plugin/v/io.github.softreigns.consolelogprettify.svg)
 
 ![Plugin screenshot](media/screenshot_expanded.png)
 
 <!-- Plugin description -->
-Pretty JSON Log plugin for IntelliJ Platform makes NDJSON (Newline Delimited JSON a.k.a. JSON Lines) logs more readable
+Console Log Prettify plugin for IntelliJ Platform makes NDJSON (Newline Delimited JSON a.k.a. JSON Lines) logs more readable
 in the console. It has the following features:
 
 - **JSON Parsing**: Automatically parses each log line as JSON and extracts essential log information such as timestamp,
@@ -38,7 +38,7 @@ switch log formats between production and local development environments.
 
 - Manually:
 
-  Download the [latest release](https://github.com/orangain/pretty-json-log-plugin/releases/latest) and install it
+  Download the [version](https://plugins.jetbrains.com/plugin/29850-console-log-prettify/versions) and install it
   manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
@@ -49,9 +49,9 @@ After installation, newly written JSON lines logs in the console will be automat
 JetBrains IDEs provide different kinds of consoles for different run configurations, but this plugin does not currently
 support all consoles due
 to [the lack of extension points in the IDE](https://youtrack.jetbrains.com/issue/IJPL-60196/TerminalExecutionConsole-Extension-points-support).
-If the console does not have the context menu item "Pretty JSON Log", the plugin is not supported in that console.
+If the console does not have the context menu item "Console Log Prettify", the plugin is not supported in that console.
 
-<img src="media/context-menu.png" alt="Context menu item with text 'Pretty JSON Log'" width="480">
+<img src="media/context-menu.png" alt="Context menu item with text 'Console Log Prettify'" width="480">
 
 ## How to configure log colors
 
@@ -63,10 +63,10 @@ Colors</kbd> > <kbd>Log console</kbd>.
 ## How to see the debug log of the plugin
 
 1. <kbd>Help</kbd> > <kbd>Diagnostic Tools</kbd> > <kbd>Debug Log Settings...</kbd>.
-2. Add line `#io.github.orangain.prettyjsonlog` to the text area of the dialog and click <kbd>OK</kbd>.
+2. Add line `#io.github.softreigns.consolelogprettify` to the text area of the dialog and click <kbd>OK</kbd>.
 3. Reproduce the issue.
 4. <kbd>Help</kbd> > <kbd>Show Log in Finder/Explorer</kbd> to open the log directory.
-5. Open the `idea.log` file and find the log of the plugin by searching for `#io.github.orangain.prettyjsonlog`.
+5. Open the `idea.log` file and find the log of the plugin by searching for `#io.github.softreigns.consolelogprettify`.
 
 Enabling debug logging may slow down the IDE, so it is recommended to disable it after reproducing the issue.
 
@@ -92,7 +92,7 @@ Thanks to the [IntelliJ Platform Plugin Template][template], I was able to quick
 3. CI/CD workflow: Create a GitHub release draft for the new version automatically.
 4. Human: Publish the release note.
 5. CI/CD workflow: Start deployment workflow automatically, but it will wait for human approval.
-6. Human: Approve deployment in [Actions page](https://github.com/orangain/pretty-json-log-plugin/actions).
+6. Human: Approve deployment in actions.
 7. CI/CD workflow: Deploy the new version to JetBrains Marketplace and create a PR to update CHANGELOG.md.
 8. Human: Merge the PR to update `CHANGELOG.md`.
 9. JetBrains: The new version will be reviewed by JetBrains and if there are no problems, it will be published in Marketplace.
